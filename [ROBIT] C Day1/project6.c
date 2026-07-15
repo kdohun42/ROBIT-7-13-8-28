@@ -6,7 +6,7 @@ int main(void)
     int row;
     int i;
 
-    printf("°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä. ");
+    printf("ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤. ");
     scanf("%d", &n);
 
     for (row = 1; row <= n; row++)
