@@ -1,11 +1,11 @@
-// °úÁ¦-5
+// ê³¼ì œ-5
 #include <stdio.h>
 
 int main()
 {   
     int num;
 
-    printf("°ªÀ» ÀÔ·ÂÇÏ½Ã¿À.");
+    printf("ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤.");
     scanf("%d", &num);
 
     int i = 0, j = 0;
