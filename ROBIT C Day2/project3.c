@@ -1,25 +1,65 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-char input(void);
+int char_compare(char arr[9]);
 
 int main(){
 
-    char input(void);
-    return 0;
-}
+    char arr[9];
 
-char input(void){
-
-    char arr[8];
-
-    printf("ìŒ ì…ë ¥");
+    printf("À½ ÀÔ·Â\n");
     for( int i = 0; i < 8; i++){
         scanf("%c", &arr[i]);
     }
 
-    for( int i = 0; i < 8; i++){
-        printf("%c", arr[i]);
+    char_compare(arr);
+
+    switch (char_compare(arr))
+    {
+    case 1:
+        printf("°á°ú : ascending");
+        break;
+    case 2:
+        printf("°á°ú : descending");
+        break;
+    default:
+        printf("°á°ú : mixed");
+        break;
     }
 
-} return 
+    return 0;
+}
+
+int char_compare(char arr[9]){
+    
+    char compare_arr1[9] = "cdefgabC";
+    char compare_arr2[9] = "Cbagfedc";
+    int count1 = 0, count2 = 0;
+
+    for( int i = 0; i < 9; i++){
+        if(compare_arr1[i] == arr[i]){
+            count1 += 1;
+        }
+        else{
+            break;
+        }
+
+        if(compare_arr2[i] == arr[i]){
+            count2 += 1;
+        }
+        else{
+            break;
+        }
+    }
+
+    if ( count1 == 9){
+        return 1;
+    }
+
+    else if( count2 == 9){
+        return 2;
+    }
+    
+    else{
+        return 3;
+    }
+}
