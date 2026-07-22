@@ -17,6 +17,7 @@ int main(){
 
     if(sizeCol <= 0 || sizeRow <= 0){
         printf("행과 열은 1이상의 정수이어야 합니다.");
+        return 1;
     }
             
     row = sizeRow;
@@ -102,7 +103,7 @@ while(start_Col < sizeCol_value && start_Row < sizeRow_value ){ // 나선형 반
         sizeRow_value--; // 위의 반복문 끝나면 왼쪽으로 갈 곳이 없다. 위로 한 칸 이동
     }
 
-    if(start_Col <= sizeCol_value){ // 왼쪽 열이 남았는지 확인
+    if(start_Col < sizeCol_value){ // 왼쪽 열이 남았는지 확인
         /*
         아래 행에서 위 행까지 반복
         반복 시 숫자 채움
