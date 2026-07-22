@@ -15,7 +15,10 @@ int main(){
     printf("행의 수를 입력하세요:");
     scanf("%d", &sizeRow);
 
-    
+    if(sizeCol <= 0 || sizeRow <= 0){
+        printf("행과 열은 1이상의 정수이어야 합니다.");
+    }
+            
     row = sizeRow;
     col = sizeCol;
 
